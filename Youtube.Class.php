@@ -26,7 +26,7 @@ Class YouTube {
                 $r['views'] = $video['yt$statistics']['viewCount'];
 
                 $rating['amount'] = $video['gd$rating']['average'];
-                $r['percentage'] = round($rating['amount'] * 20, 1);
+                $r['percentage'] = round(($rating['amount'] / 5) * 100 , 1);
                 if ($r['percentage'] > 100) {
                 $r['percentage'] = 100;
                 }
